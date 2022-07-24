@@ -32,18 +32,13 @@ while True:
 imgs = driver.find_elements(By.CSS_SELECTOR, ".rg_i.Q4LuWd")
 count = 1
 for img in imgs:
-    img.click()
-    time.sleep(3)
-    imgUrl = driver.find_element(By.CSS_SELECTOR, ".n3VNCb").get_attribute('src')
-    urllib.request.urlretrieve(imgUrl,str(count) + ".jpg")
-    count += 1
+    try: 
+        img.click()
+        time.sleep(2)
+        imgUrl = driver.find_element(By.XPATH, "/html/body/div[2]/c-wiz/div[3]/div[2]/div[3]/div/div/div[3]/div[2]/c-wiz/div/div[1]/div[1]/div[3]/div/a/img").get_attribute('src')
+        urllib.request.urlretrieve(imgUrl,str(count) + ".jpg")
+        count += 1
+    except:
+        pass
 
-
-
-# assert "Python" in driver.title
-# elem = driver.find_element(By.NAME, "q")
-# elem.clear()
-# elem.send_keys("pycon")
-# elem.send_keys(Keys.RETURN)
-# assert "No results found." not in driver.page_source
-# driver.close()
+driver.close()
