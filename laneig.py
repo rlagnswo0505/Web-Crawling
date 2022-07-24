@@ -18,4 +18,3 @@ for img in imgs:
         pass
 
 driver.close()
-
