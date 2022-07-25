@@ -3,7 +3,7 @@
 - 파일 다운로드 후 vscode 로 열기
 
 - 터미널 창 열기
-cd Script 로 이동 후
+cd Scripts 로 이동 후
 pip install selenium
 
 - 자기 크롬 버전에 맞는 크롬드라이버 다운
