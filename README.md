@@ -1,4 +1,4 @@
-# Web-Crawling
+# Web-Crawling[selenium 사용]
 
 - 파일 다운로드 후 vscode 로 열기
 
